@@ -22,56 +22,118 @@
         </div>
     </header>
 
-    <!-- LOGIN SECTION -->
+    <!-- AUTH SECTION -->
     <section class="login-container">
         <div class="login-card">
-            <div class="login-header">
-                <h1>Welcome Back</h1>
-                <p>Login to access your profile and opportunities</p>
-            </div>
-
-            <form class="login-form">
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <!-- SIGNUP VIEW -->
+            <div class="auth-view" id="signupView">
+                <div class="login-header">
+                    <h1>Create Your Account</h1>
+                    <p>Join TalentBridge and start your journey</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
+                <form class="login-form" id="signupForm">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" name="name" placeholder="Enter your full name" required>
+                    </div>
 
-                <div class="form-footer">
-                    <label class="remember-me">
-                        <input type="checkbox" name="remember">
-                        <span>Remember me</span>
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-confirm">Confirm Password</label>
+                        <input type="password" id="signup-confirm" name="confirm" placeholder="Confirm your password" required>
+                    </div>
+
+                    <label class="terms">
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to the <a href="#">Terms and Conditions</a></span>
                     </label>
-                    <a href="#" class="forgot-password">Forgot password?</a>
+
+                    <button type="submit" class="btn-login">Create Account</button>
+                </form>
+
+                <div class="divider">
+                    <span>Or continue with</span>
                 </div>
 
-                <button type="submit" class="btn-login">Sign In</button>
-            </form>
+                <div class="social-login">
+                    <button type="button" class="social-btn" title="Sign up with Google">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button type="button" class="social-btn" title="Sign up with GitHub">
+                        <i class="fab fa-github"></i>
+                    </button>
+                    <button type="button" class="social-btn" title="Sign up with LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </button>
+                </div>
 
-            <div class="divider">
-                <span>Or continue with</span>
+                <div class="signup-footer">
+                    <p>Already have an account? <a href="#" class="toggle-view" data-view="login">Sign in here</a></p>
+                </div>
             </div>
 
-            <div class="social-login">
-                <button class="social-btn" title="Login with Google">
-                    <i class="fab fa-google"></i>
-                </button>
-                <button class="social-btn" title="Login with GitHub">
-                    <i class="fab fa-github"></i>
-                </button>
-                <button class="social-btn" title="Login with LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </button>
-            </div>
+            <!-- LOGIN VIEW -->
+            <div class="auth-view hidden" id="loginView">
+                <div class="login-header">
+                    <h1>Welcome Back</h1>
+                    <p>Login to access your profile and opportunities</p>
+                </div>
 
-            <div class="signup-footer">
-                <p>Don't have an account? <a href="#" class="signup-link">Sign up here</a></p>
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="form-footer">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">Sign In</button>
+                </form>
+
+                <div class="divider">
+                    <span>Or continue with</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn" title="Login with Google">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button type="button" class="social-btn" title="Login with GitHub">
+                        <i class="fab fa-github"></i>
+                    </button>
+                    <button type="button" class="social-btn" title="Login with LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </button>
+                </div>
+
+                <div class="signup-footer">
+                    <p>Don't have an account? <a href="#" class="toggle-view" data-view="signup">Sign up here</a></p>
+                </div>
             </div>
         </div>
     </section>
+
+    <script src="Bridge.js"></script>
 </body>
 </html>
